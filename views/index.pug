@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  div 
+      each message in messages 
+        div 
+          h5= message.user 
+          p= message.text 
+          p= message.date
+
+  a(href="/new") New message
